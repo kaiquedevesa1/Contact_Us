@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a7e2d7;
+}
+
+.container-contact {
+  background-color: #dff1e7;
+  border-radius: 5%;
+  border: none;
+  color: black;
+  max-width: 864px;
+  width: 864px;
+  height: 850px;
+  padding: 30px 30px 0px 50px;
+  box-sizing: border-box;
+}
+
+.container-contact h1 {
+  font-size: 30px;
+}
+
+.container-contact p {
+  padding: 25px 0 10px 0px;
+}
+
+.container-contact input {
+  background: none;
+  border: 2px solid #87a3a6;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input:hover,
+.query-option:hover {
+  border-color: #0c7d69;
+}
+
+.form-name {
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.query-type {
+  width: 100%;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+}
+
+.query-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 2px solid #87a3a6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.query-option input {
+  appearance: none;
+}
