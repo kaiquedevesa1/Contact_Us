@@ -27,13 +27,22 @@ export const Contact = () => {
         <div className="options">
           <label className="query-option">
             <input type="radio" name="query" value="general" />
-            General enquiry
+            General Enquiry
           </label>
           <label className="query-option">
-            <input type="radio" name="query" value="suport" />
+            <input
+              className="suport"
+              type="radio"
+              name="query"
+              value="suport"
+            />
             Support Request
           </label>
         </div>
+      </div>
+
+      <div className="message">
+        <p>Message *</p>
       </div>
     </div>
   );

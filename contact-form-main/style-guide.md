@@ -19,9 +19,9 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
+- White: #ffffff
 - Grey 500 (medium): #87a3a6
-- Grey 900 (darker): hsl(187, 24%, 22%)
+- Grey 900 (darker): #2b4246
 
 ## Typography
 
