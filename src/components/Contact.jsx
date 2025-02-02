@@ -25,25 +25,36 @@ export const Contact = () => {
       <div className="query-type">
         <p>Query Type *</p>
         <div className="options">
-          <label className="query-option">
+          <div className="query-option">
             <input type="radio" name="query" value="general" />
-            General Enquiry
-          </label>
-          <label className="query-option">
-            <input
-              className="suport"
-              type="radio"
-              name="query"
-              value="suport"
-            />
-            Support Request
-          </label>
+
+            <label className="check">General Enquiry</label>
+          </div>
+
+          <div className="query-option">
+            <input type="radio" name="query" value="suport" />
+            <label className="check">Support Request</label>
+          </div>
         </div>
       </div>
 
-      <div className="message">
+      <div>
         <p>Message *</p>
+        <textarea
+          className="text-message"
+          name="message"
+          id="message"
+        ></textarea>
       </div>
+
+      <div className="box-confirm">
+        <input type="checkbox" id="confirm" />
+        <label htmlFor="confirm">
+          I consent to being contacted by the team *
+        </label>
+      </div>
+
+      <button>Enviar</button>
     </div>
   );
 };
