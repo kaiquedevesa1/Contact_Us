@@ -58,14 +58,15 @@ input:hover {
 
 .options {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  justify-content: flex-start;
 }
 
 .query-option {
   display: flex;
   border: 2px solid #87a3a6;
   border-radius: 8px;
-  padding: 10px 90px;
+  padding: 10px 30px;
   width: 100%;
 }
 
@@ -74,27 +75,40 @@ input:hover {
   cursor: pointer;
 }
 
-.query-option input {
+.query-option input,
+.box-confirm input {
   display: none;
+}
+
+.option-click {
+  background-color: #dff1e7;
+  border: 3px solid #0c7d69;
 }
 
 .query-option input + label:before {
   content: "";
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border: 2px solid #87a3a6;
   border-radius: 50%;
-  background-color: white;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 8px;
+  margin-right: 30px;
   margin-bottom: 3px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.query-option input:checked + label::after {
+  width: 300px;
 }
 
 .query-option input:checked + label:before {
-  background-color: #0c7d69;
   box-sizing: border-box;
-  border: 5px solid white;
+  background-color: #0c7d69;
+  border: 2px solid transparent;
 }
 
 .text-message {
@@ -110,10 +124,6 @@ input:hover {
   resize: none;
 }
 
-.box-confirm input {
-  display: none;
-}
-
 .box-confirm input + label:before {
   content: "";
   width: 18px;
@@ -124,7 +134,7 @@ input:hover {
   vertical-align: middle;
   margin-right: 30px;
   margin-bottom: 3px;
-  background-size: contain; /* Ajusta a imagem para caber no espaço */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -132,10 +142,29 @@ input:hover {
 
 .box-confirm input:checked + label::before {
   background-image: url(/src/image/icon-checkbox-check.svg);
-  border: 2px solid transparent; /* Mantém a estrutura sem sumir */
+  border: 2px solid transparent;
+}
+
+.container-submit {
+  outline: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 button {
   background-color: #0c7d69;
+  width: 100%;
+  border: none;
+  box-shadow: none;
   outline: none;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button:hover {
+  background-color: #2b4246;
 }

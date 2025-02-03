@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact_style.css";
 
 export const Contact = () => {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleClick = (value) => {
+    setSelectedOption(value);
+  };
+
   return (
     <div className="container-contact">
       <h1 className="title">Contact Us</h1>
@@ -25,15 +31,38 @@ export const Contact = () => {
       <div className="query-type">
         <p>Query Type *</p>
         <div className="options">
-          <div className="query-option">
-            <input type="radio" name="query" value="general" />
-
-            <label className="check">General Enquiry</label>
+          <div
+            className={`query-option ${
+              selectedOption === "general" ? "option-click" : ""
+            }`}
+            onClick={() => handleClick("general")}
+          >
+            <input
+              type="radio"
+              id="check-g"
+              name="query"
+              value="general"
+              checked={selectedOption === "general"}
+              onChange={() => handleClick("general")}
+            />
+            <label htmlFor="check-g">General Enquiry</label>
           </div>
 
-          <div className="query-option">
-            <input type="radio" name="query" value="suport" />
-            <label className="check">Support Request</label>
+          <div
+            className={`query-option ${
+              selectedOption === "suport" ? "option-click" : ""
+            }`}
+            onClick={() => handleClick("suport")}
+          >
+            <input
+              type="radio"
+              id="check-s"
+              name="query"
+              value="suport"
+              checked={selectedOption === "suport"}
+              onChange={() => handleClick("suport")}
+            />
+            <label htmlFor="check-s">Support Request</label>
           </div>
         </div>
       </div>
@@ -54,7 +83,9 @@ export const Contact = () => {
         </label>
       </div>
 
-      <button>Enviar</button>
+      <div className="container-submit">
+        <button className="submit">Enviar</button>
+      </div>
     </div>
   );
 };
