@@ -92,28 +92,26 @@ input:hover {
   position: relative;
 }
 
-/* Estilização do botão de rádio */
 .query-option input + label:before {
   content: "";
-  width: 25px; /* Tamanho do botão */
+  width: 25px;
   height: 25px;
-  border: 2px solid #0c7d69; /* Borda externa */
+  border: 2px solid #0c7d69;
   border-radius: 50%;
   display: inline-block;
-  background-color: #dff1e7; /* Fundo branco */
-  margin-right: 10px; /* Espaço entre o botão e o texto */
-  position: relative; /* Mantém referência para a bolinha interna */
+  background-color: #dff1e7;
+  margin-right: 10px;
+  position: relative;
 }
 
-/* Criar a bolinha interna quando selecionado */
 .query-option input:checked + label:after {
   content: "";
-  width: 15px; /* Tamanho da bolinha central */
+  width: 15px;
   height: 15px;
-  background-color: #0c7d69; /* Cor do centro */
+  background-color: #0c7d69;
   border-radius: 50%;
   position: absolute;
-  left: 6.5px; /* Centraliza dentro do círculo externo */
+  left: 6.5px;
   top: 49%;
   transform: translateY(-50%);
 }
