@@ -8,6 +8,25 @@ export const Contact = () => {
     setSelectedOption(value);
   };
 
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    queryType: "",
+    message: "",
+    consent: false,
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
   return (
     <div className="container-contact">
       <h1 className="title">Contact Us</h1>

@@ -106,9 +106,10 @@ input:hover {
 
 .query-option input:checked + label:after {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 15.5px;
+  height: 15.5px;
   background-color: #0c7d69;
+
   border-radius: 50%;
   position: absolute;
   left: 6.5px;
