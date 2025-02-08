@@ -174,3 +174,8 @@ button:focus {
 button:hover {
   background-color: #2b4246;
 }
+
+.error {
+  display: inline-block;
+  color: red;
+}
