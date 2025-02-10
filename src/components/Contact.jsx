@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Contact_style.css";
 
 export const Contact = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -62,7 +64,7 @@ export const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      alert("Form submitted sucessfully!", formData);
+      setShowModal(true);
 
       setFormData({
         firstName: "",
@@ -173,16 +175,28 @@ export const Contact = () => {
           id="confirm"
           name="consent"
           value={formData.consent}
+          checked={formData.consent}
+          onChange={handleChange}
         />
         <label htmlFor="confirm">
           I consent to being contacted by the team *
         </label>
-        {errors.consent && <span className="error">{errors.message}</span>}
+        {errors.consent && <span className="error">{errors.consent}</span>}
       </div>
 
       <div className="container-submit">
         <button className="submit">Enviar</button>
       </div>
+
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2>Message Sent</h2>
+            <p>Thanks for completing the form. We'll be in touch soon!</p>
+            <button onClick={() => setShowModal(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </form>
   );
 };
