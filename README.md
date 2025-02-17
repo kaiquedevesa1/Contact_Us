@@ -19,7 +19,7 @@ Este é um projeto de **formulário de contato para empresas**, desenvolvido com
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/kaiquedevesa1/Contact_Us.git
    ```
 2. Acesse a pasta do projeto:
    ```bash
